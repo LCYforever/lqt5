@@ -399,11 +399,11 @@ public:
 };
 #else
 
-// template<typename T>
-// using QLEInteger = QSpecialInteger<QLittleEndianStorageType<T>>;
+template<typename T>
+using QLEInteger = QSpecialInteger<QLittleEndianStorageType<T>>;
 
-// template<typename T>
-// using QBEInteger = QSpecialInteger<QBigEndianStorageType<T>>;
+template<typename T>
+using QBEInteger = QSpecialInteger<QBigEndianStorageType<T>>;
 #endif
 template <typename T>
 class QTypeInfo<QLEInteger<T> >
